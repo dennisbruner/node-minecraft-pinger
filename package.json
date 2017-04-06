@@ -1,6 +1,6 @@
 {
   "name": "minecraft-pinger",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Dennis Bruner <contact@dennisbruner.de>",
   "description": "A promise-based minecraft pinger in Node.js",
   "license": "MIT",
