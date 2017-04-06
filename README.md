@@ -9,7 +9,6 @@ A promise-based minecraft pinger in Node.js
  - [x] Calculate latency in milliseconds
  - [x] Resolve SRV dns entry
  - [ ] Able to ping servers prior version 1.6
- - [ ] Make it work with Node.js 4.x (Currently 6.x and above)
 
 ## Example
 ```javascript
