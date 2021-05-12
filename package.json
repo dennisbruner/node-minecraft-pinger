@@ -21,7 +21,6 @@
     "standard": "^7.1.2"
   },
   "dependencies": {
-    "node-int64": "^0.4.0",
     "varint": "^4.0.1"
   }
 }
