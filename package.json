@@ -23,5 +23,6 @@
   "dependencies": {
     "node-int64": "^0.4.0",
     "varint": "^4.0.1"
-  }
+  },
+  "types": "lib/index.d.ts"
 }
