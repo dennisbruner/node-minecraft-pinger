@@ -11,8 +11,8 @@ export interface pingPromiseInterface {
 			extra?: {
 				color: string;
 				text: string;
-			}[];
-		}[];
+			};
+		};
 	};
 	players: {
 		online: number;
@@ -35,8 +35,8 @@ export interface pingPromiseInterface {
 export declare  function pingPromise(hostname:string,port:number): Promise<pingPromiseInterface>;
 /**
  * 
- * @param { string } hostname The host name of the server  
- * @param { number } port Port of the server most servers default to 25565
- * @returns { pingPromiseInterface } The information of the server 
+ * @param {string} hostname The host name of the server  
+ * @param {number} port Port of the server most servers default to 25565
+ * @returns {pingPromiseInterface} The information of the server 
  */
 export declare function ping(hostname:string, port:number ,params:(error:Error, result:pingPromiseInterface) => void)
