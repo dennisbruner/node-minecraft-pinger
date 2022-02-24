@@ -1,27 +1,44 @@
 declare module 'minecraft-pinger'
 
 export interface pingPromiseInterface {
-    description: {
-		text: string;
-		extra?: {
-			color?: string;
-			text: string;
-			bold?: boolean;
-			strikethrough?: boolean;
-			extra?: {
-				color: string;
-				text: string;
-			};
-		};
-	};
 	players: {
+		/**
+		 * Current Number of players online
+		 */
 		online: number;
+		/**
+		 * Maximum Number of players that could be online
+		 */
 		max: number;
-		sample?: {name: string; id: string}[];
 	};
-	version: {name: string; protocol: number};
+	version: {
+		/**
+		 * Server Software & Version Supports
+		 */ 
+		name: string;
+		/**
+		 * Protocol Version
+		 */
+		protocol: number};
+	/**
+	 * RoundTrip Latency in milliseconds
+	 */
 	ping: number;
-	modinfo?: {type: string; modList: string[]};
+	/**
+	 * Moderator Info
+	 */
+	modinfo?: {
+		/**
+		 * Mod list type
+		 */
+		type: string;
+		/**
+		 * Moderator List May not exist
+		 */
+		modList: string[]};
+	/**
+	 * Server Favicon , Can be more than 1000 Characters
+	 */
 	favicon?: string;
 }
 
@@ -33,7 +50,15 @@ export interface pingPromiseInterface {
  * @param {number} port Port of the server most servers default to 25565
  * @returns  The information of the server
  */
-export declare  function pingPromise(hostname:string,port:number): Promise<pingPromiseInterface>;
+export declare  function pingPromise(
+	/**
+	 * The Host Name 
+	 */
+	hostname:string,
+	/**
+	 *  The Port of the server , most servers default to 25565
+	 */
+	port:number): Promise<pingPromiseInterface>;
 /**
  * Returns basic info about the server
  * 
@@ -41,4 +66,12 @@ export declare  function pingPromise(hostname:string,port:number): Promise<pingP
  * @param {number} port Port of the server most servers default to 25565
  * @returns  The information of the server 
  */
-export declare function ping(hostname:string, port:number ,params?:(error?:Error, result?:pingPromiseInterface) => null):pingPromiseInterface
+export declare  function ping(
+	/**
+	 * The Host Name 
+	 */
+	hostname:string,
+	/**
+	 *  The Port of the server , most servers default to 25565
+	 */
+	port:number):pingPromiseInterface
